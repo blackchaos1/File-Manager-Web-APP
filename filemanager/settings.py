@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 CSRF_TRUSTED_ORIGINS = [
-    '*',  # Replace with your actual Ngrok URL
+    'https://127.0.0.1',  # Replace with your actual Ngrok URL
 ]
 
 # Application definition
