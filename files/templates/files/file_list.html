@@ -1,0 +1,23 @@
+<!-- templates/files/file_list.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<hr>
+<h2 class="text-center">Your Reports</h2>
+<ul>
+    {% for file in files %}
+    <div class="container">
+        <div class="list-group">
+            <a  href="{% url 'download_file' file.id %}" class="list-group-item list-group-item-action">{{ file.file.name }} - {{ file.uploaded_at }}</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="alert alert-danger" role="alert">
+          Your reports will delete after 7 days , if you want upload it again , Please Contact Us!
+        </div>
+    </div>
+    {% endfor %}
+</ul>
+{% endblock %}
+

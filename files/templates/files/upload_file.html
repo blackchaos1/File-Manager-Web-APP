@@ -1,0 +1,14 @@
+<!-- templates/files/upload_file.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Upload File</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
+<a href="{% url 'file_list' %}">Back to file list</a>
+
+{% endblock %}
